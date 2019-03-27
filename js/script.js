@@ -1,34 +1,44 @@
 //Store at least 5 quotes into a variable using an array.
-var random_quotes = [
+var quotes = [
   {
       quote: "Don't cry because it's over, smile because it happened.",
-      author: "Dr.Seuss"
+      author: "Dr.Seuss",
+      citation: "https://www.goodreads.com/quotes/tag/optimism",
+      year: "1970"
   },
   {
       quote: "Be yourself; everyone else is already taken.",
-      author: "Oscar Wilde"
+      author: "Oscar Wilde",
+      citation: "https://www.goodreads.com/quotes/tag/optimism",
+      year: "2007"
   },
   {
       quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
-      author: "Albert Einstein"
+      author: "Albert Einstein",
+      citation: "https://www.goodreads.com/quotes/tag/optimism",
+      year: "1962"
   },
   {
       quote: "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
-      author: "Bernard M. Baruch"
+      author: "Bernard M. Baruch",
+      citation: "https://www.goodreads.com/quotes/tag/optimism",
+      year: "2001"
   },
   {
       quote: "Don’t walk in front of me… I may not follow. Don’t walk behind me… I may not lead. Walk beside me… just be my friend.",
-      author: "Albert Camus"
+      author: "Albert Camus",
+      citation: "https://www.goodreads.com/quotes/tag/optimism",
+      year: "1990"
   }
 ]
 
 //Test the array by logging it to the console. 
-//console.log(random_quotes)
+//console.log(quotes)
 
 //Create a variable that will store a random number and return a random quote from the array.
 function getRandomQuote() {
-  var random_numer = Math.floor(Math.random() * random_quotes.length);
-  return random_quotes[random_numer];
+  var random_numer = Math.floor(Math.random() * quotes.length);
+  return quotes[random_numer];
 }
 
 //Create a test by printing the result to the console. 
@@ -49,6 +59,8 @@ function printQuote() {
 //This is statement will print the author of the quote.
   if (randomQuote.author) {
     HTML += '<span class="author">' + randomQuote.author + '</span>';
+    HTML += '<span class="citation">' + randomQuote.citation + '</span>';
+    HTML += '<span class="year">' + randomQuote.year + '</span>';
   }
 
   HTML += '</p>';
